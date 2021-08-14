@@ -19,6 +19,7 @@ Some notes:
 
 #### Sources
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+* [lf filemanager](https://github.com/gokcehan/lf)
 * [vimplug](https://github.com/junegunn/vim-plug)
 * [Guckes vim config](http://www.guckes.net/vim/setup.html)
 * [vim autoapair plugin](https://github.com/jiangmiao/auto-pairs)
