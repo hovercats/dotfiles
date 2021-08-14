@@ -1,0 +1,11 @@
+#!/bin/sh
+
+#~/.fehbg
+hsetroot -fill /home/wololo/Pictures/wallhaven-43vgyn.jpg
+xrdb ~/.Xresources 
+setxkbmap no &
+#rainbow.sh &
+#exec sxhkd 
+xbanish &
+sxhkd &
+exec monsterwm

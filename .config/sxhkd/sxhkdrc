@@ -1,0 +1,92 @@
+#launch tabbed vimb
+super + alt + v
+	tabbed -c vimb -e 
+
+# move mouse with arrowkeys
+super + {Down,Right,Left,Up}
+	xdotool mousemove_relative {0 10,10 0,-- -10 0, -- 0 -10}
+
+#focus on first window in stack 
+#super + control + f
+#	wtf $(lsw | head -n 1)
+
+# start tiling
+#super + alt + t
+#	tile.sh
+
+# move windows around
+#super + {h,j,k,l}
+#      wmv {-20 0, 0 20, 0 -20, 20 0} $(pfw)
+
+# resize windows
+#super + shift + {h,j,k,l}
+#      wrs {-20 0, 0 20, 0 -20, 20 0} $(pfw)
+
+# grow window 
+#super + {Home,End}
+#  wrs {20 20, -20 -20} $(pfw)
+
+# grow with mousescroll
+#super + {button4,button5}
+#  wrs {20 20, -20 -20} $(pfw)
+
+#move windows with mouse
+#super + button1
+#	xmmv $(wid)
+
+# resize windows with mouse
+#super + button3
+# xmrs $(wid)
+
+
+# close window
+#super + q
+#	killw  $(pfw) && wtf $(lsw) -n 1
+
+# cycle through windows
+#alt + Tab  
+#	focus.sh prev
+
+#alt + shift + Tab
+#	focus.sh next
+
+# set window fullscreen
+#super + x
+#  fullscreen.sh $(pfw)
+
+#launch st
+super + Return
+ st  
+
+#launch dmenu
+super + d
+	dmenu_run
+
+#firefox
+super + alt + f
+	firefox
+
+#volumecontrol
+super + {F11,F10}
+	amixer set Master {5%+,5%-}
+
+#kill x server
+super + control + q
+	pkill x && pkill rainbow.sh
+
+#reboot/poweroff
+super + alt + p
+	ssu poweroff
+
+super + alt + r
+	ssu reboot
+
+#brightness control
+super + {F3,F4}
+	ssu brightnessctl --class=backlight set {10%-,10%+}
+	
+#restart eiwd
+super + F2
+	ssu sv restart eiwd
+
+
