@@ -9,12 +9,12 @@ Some notes:
 	* `ctrl + o` to use LF
 	* `ctrl + v` to go into vim buffer
 	* autocomplete, with hidden files aswell.
-		* should be case insensitive, but its somewhat finnicky at times.
+		* autocomplete should be case insensitive, but its somewhat finnicky at times.
 	* syntax highlighting
 * vimrc
 	* alot of simple settings from Sven Gucke
-	* vimplug pluggin manager
-	* auto pair plugin. pairs brackets and more
+	* vimplug plugin manager
+	* auto pair plugin. pairs brackets and more automatically
 	* vim polyglot for good syntax highlighting, for multiple languages	
 
 #### Sources
