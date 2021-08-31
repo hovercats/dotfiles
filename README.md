@@ -8,9 +8,13 @@ Some notes:
 	* has Vi mode enabled
 	* `ctrl + o` to use LF
 	* `ctrl + v` to go into vim buffer
-	* autocomplete, with hidden files aswell.
-		* autocomplete should be case insensitive, but its somewhat finnicky at times.
+	* autocomplete
+		* works with hidden files aswell
+		* autocomplete is case-insensitive
+			* so you can type all-caps, and tab complete to correct file/dir
+			* and vice versa
 	* syntax highlighting
+	* autopairing "" () etc, like in vim
 * vimrc
 	* alot of simple settings from Sven Gucke
 	* vimplug plugin manager
@@ -19,6 +23,7 @@ Some notes:
 
 #### Sources
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+* [zsh-autopair](https://github.com/hlissner/zsh-autopair)
 * [lf filemanager](https://github.com/gokcehan/lf)
 * [vimplug](https://github.com/junegunn/vim-plug)
 * [Guckes vim config](http://www.guckes.net/vim/setup.html)

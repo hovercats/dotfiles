@@ -2,9 +2,10 @@
 # (In your .bashrc, .zshrc etc)
 export PATH="${PATH}:${HOME}/.local/bin/"
 
-# TTY colors
+# add colors even in TTY
 source ~/.ttycolors.sh
 
+# typewritten prompt
 fpath+=$HOME/git/typewritten
 autoload -U promptinit; promptinit
 prompt typewritten
@@ -18,22 +19,31 @@ alias 'poweroff'='ssu poweroff'		#busybox
 alias 'reboot'='ssu reboot' 		#busybox
 alias 'sv'='ssu sv'
 alias 'am'='alsamixer'
-alias 'resize'='mogrify -resize'
+alias 'resize'='mogrify -resize' # imagemagick command
 alias 'batt'='cat /sys/class/power_supply/BAT1/capacity && cat /sys/class/power_supply/BAT1/status'
 
+# some other usefull stuff (man zshoptions for more options)
 setopt autocd # automaticly cd into typed directory
-stty stop undef		# Disable ctrl-s to freeze terminal
+setopt interactive_comments # add comments even in interactive shells
+unsetopt BEEP # disable beeping.
+zle_highlight=( 'paste:none' ) # dont highlight pasted stuff
 stty stop undef		# Disable ctrl-s to freeze terminal
 
-# Basic auto/tab complete:
+## these dont seem to work as expect, so Ill use zstyle part instead
+#setopt menu_complete # menu completion, selecting with tab-key
+#setopt no_list_ambiguous # an extension of the above setopt
+#setopt globdots # match files that begins with a . without specifying it
+#setopt auto_list # automatically list choices on ambiguous completion
+#unsetopt case_glob # make globbing case-insensitive. 
+
+# Basic tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
-zstyle ':completion:*:*:*:*:globbed-files' matcher 'r:|?=** m:{a-z\-}={A-Z\_}'
-zstyle ':completion:*:*:*:*:local-directories' matcher 'r:|?=** m:{a-z\-}={A-Z\_}'
-zstyle ':completion:*:*:*:*:directories' matcher 'r:|?=** m:{a-z\-}={A-Z\_}'
-
+zstyle ':completion:*:*:*:*:globbed-files' matcher 'r:|?=** m:{a-zA-Z\-}={A-Za-z\_}'
+zstyle ':completion:*:*:*:*:local-directories' matcher 'r:|?=** m:{a-zA-Z\-}={A-Za-z\_}'
+zstyle ':completion:*:*:*:*:directories' matcher 'r:|?=** m:{a-zA-Z\-}={A-Za-z\_}'
 zmodload zsh/complist
-compinit
+compinit 
 _comp_options+=(globdots)		# Include hidden files.
 
 # vi mode
@@ -55,8 +65,7 @@ fi
 zle -N zle-keymap-select
 zle-line-init() {
 	zle -K viins # initiate `vi insert` as keymap
-# (can be removed if `bindkey -V` has been set
-# elsewhere)
+# (can be removed if `bindkey -V` has been set elsewhere)
 echo -ne "\e[4 q"
 }
 zle -N zle-line-init
@@ -94,3 +103,5 @@ bindkey -s '^o' 'lfcd\n'
 ### Plugins
 # Syntax highlighting
 source ~/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+# autopairs. i.e. "" () [] 
+source ~/zsh/zsh-autopair/autopair.zsh
