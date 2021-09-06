@@ -8,7 +8,7 @@ set lcs=tab:»·  lcs+=trail:·
 
 
 " vim plugins
-call plug#begin('~/.vim/autoload/plugged')
+call plug#begin('$HOME/.vim/autoload/plugged')
 
 	" Auto pairs for '(' '[' '{'
 	Plug 'jiangmiao/auto-pairs'	
