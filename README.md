@@ -15,17 +15,19 @@ Some notes:
 			* and vice versa
 	* syntax highlighting
 	* autopairing "" () etc, like in vim
+	* typewritten prompt
 * vimrc
 	* alot of simple settings from Sven Gucke
 	* vimplug plugin manager
 	* auto pair plugin. pairs brackets and more automatically
 	* vim polyglot for good syntax highlighting, for multiple languages	
 
-#### Sources
+#### Sources/References
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 * [zsh-autopair](https://github.com/hlissner/zsh-autopair)
 * [lf filemanager](https://github.com/gokcehan/lf)
+* [typewritten prompt](https://github.com/reobin/typewritten)
 * [vimplug](https://github.com/junegunn/vim-plug)
-* [Guckes vim config](http://www.guckes.net/vim/setup.html)
 * [vim autoapair plugin](https://github.com/jiangmiao/auto-pairs)
 * [vim-polyglotplugin](https://github.com/sheerun/vim-polyglot)
+* [Guckes vim config](http://www.guckes.net/vim/setup.html)
