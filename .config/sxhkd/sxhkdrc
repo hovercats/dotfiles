@@ -1,3 +1,7 @@
+# disable/enable touchpad
+super + alt + {m,n}
+	synclient TouchpadOff={0,1}
+
 #launch tabbed vimb
 super + alt + v
 	tabbed -c vimb -e 
