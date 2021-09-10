@@ -17,10 +17,10 @@ Some notes:
 	* autopairing "" () etc, like in vim
 	* typewritten prompt
 * vimrc
-	* just some minor settings, nothing too special
+	* just some minor settings
 	* vimplug plugin manager
 	* auto pair plugin. pairs brackets and more automatically
-	* better syntax highlighting and more with vim-polyglot
+	* *more* syntax highlighting and more with vim-polyglot
 
 #### Sources/References
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
