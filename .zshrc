@@ -20,6 +20,7 @@ alias 'reboot'='ssu reboot' 		#busybox
 alias 'sv'='ssu sv'
 alias 'am'='alsamixer'
 alias 'resize'='mogrify -resize' # imagemagick command
+alias 'irc-kiss'='catgirl -h irc.libera.chat -j #kisslinux -n sad_plan'
 alias 'batt'='cat /sys/class/power_supply/BAT1/capacity && cat /sys/class/power_supply/BAT1/status'
 
 # some other usefull stuff (man zshoptions for more options)
@@ -29,7 +30,7 @@ unsetopt BEEP # disable beeping.
 zle_highlight=( 'paste:none' ) # dont highlight pasted stuff
 stty stop undef		# Disable ctrl-s to freeze terminal
 
-## these dont seem to work as expect, so Ill use zstyle part instead
+## these dont seem to work as Id expect, so Ill use zstyle part instead
 #setopt menu_complete # menu completion, selecting with tab-key
 #setopt no_list_ambiguous # an extension of the above setopt
 #setopt globdots # match files that begins with a . without specifying it
@@ -45,6 +46,13 @@ zstyle ':completion:*:*:*:*:directories' matcher 'r:|?=** m:{a-zA-Z\-}={A-Za-z\_
 zmodload zsh/complist
 compinit 
 _comp_options+=(globdots)		# Include hidden files.
+
+# autojump 
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+add-zsh-hook chpwd chpwd_recent_dirs
+zstyle ':chpwd:*' recent-dirs-default yes
+zstyle ':completions:' recent-dirs-insert always
+
 
 # vi mode
 bindkey -v

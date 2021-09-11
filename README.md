@@ -14,6 +14,9 @@ Some notes:
 			* so you can type all-caps, and tab complete to correct file/dir
 			* and vice versa
 	* syntax highlighting
+	* use builtin autojump feature
+			* type cdr <tab> to see previously used links
+			* its labeled in numbers, so you may use that instead
 	* autopairing "" () etc, like in vim
 	* typewritten prompt
 * vimrc
