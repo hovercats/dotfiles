@@ -2,6 +2,8 @@
 # (In your .bashrc, .zshrc etc)
 export PATH="${PATH}:${HOME}/.local/bin/"
 
+. ~/.profile
+
 # add colors even in TTY
 source ~/.ttycolors.sh
 
@@ -20,7 +22,6 @@ alias 'reboot'='ssu reboot' 		#busybox
 alias 'sv'='ssu sv'
 alias 'am'='alsamixer'
 alias 'resize'='mogrify -resize' # imagemagick command
-alias 'irc-kiss'='catgirl -h irc.libera.chat -j #kisslinux -n sad_plan'
 alias 'batt'='cat /sys/class/power_supply/BAT1/capacity && cat /sys/class/power_supply/BAT1/status'
 
 # some other usefull stuff (man zshoptions for more options)
