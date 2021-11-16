@@ -18,6 +18,17 @@ set expandtab  " convert tabs to spaces
 syntax on " enable syntax highlighting
 filetype plugin indent on " enable filetype-specific indenting
 
+" Memap moving between splits to use ctrl + hjkl
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Map resizing splits with keybindings with ctrl + shift + hjkl
+noremap <silent> <C-H> :vertical resize +3 <CR> 
+noremap <silent> <C-L> :vertical resize -3 <CR> 
+noremap <silent> <C-J> :resize +3 <CR> 
+noremap <silent> <C-K> :resize -3 <CR> 
 
 " vim plugins
 call plug#begin('/$HOME/.vim/autoload/plugged')
