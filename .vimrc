@@ -25,10 +25,14 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Map resizing splits with keybindings with ctrl + shift + hjkl
-noremap <silent> <C-H> :vertical resize +3 <CR> 
-noremap <silent> <C-L> :vertical resize -3 <CR> 
-noremap <silent> <C-J> :resize +3 <CR> 
-noremap <silent> <C-K> :resize -3 <CR> 
+noremap <silent> <C-H> :vertical resize -3 <CR> 
+noremap <silent> <C-L> :vertical resize +3 <CR> 
+noremap <silent> <C-J> :resize -3 <CR> 
+noremap <silent> <C-K> :resize +3 <CR> 
+
+" move horisontal splits to vertical splits, and vice versa with keybindings
+nnoremap <M-H> <C-w>t<C-w>H
+nnoremap <M-K> <C-w>t<C-w>K
 
 " vim plugins
 call plug#begin('/$HOME/.vim/autoload/plugged')
