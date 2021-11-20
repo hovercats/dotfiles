@@ -1,3 +1,10 @@
+"          _                    
+"   __   _(_)_ __ ___  _ __ ___ 
+"   \ \ / / | '_ ` _ \| '__/ __|
+"    \ V /| | | | | | | | | (__ 
+"   (_)_/ |_|_| |_| |_|_|  \___|
+                            
+
 " various settings
 set nocompatible " force vim to use vim defautls over vi's
 set number " show line numbers 
@@ -15,24 +22,19 @@ set incsearch " show partial matches
 set tabstop=2 " set amount of spaces a tab is
 set shiftwidth=4 " need to be set to same as tabstop
 set expandtab  " convert tabs to spaces
+set mouse=nicr " enable mouse to scroll
 syntax on " enable syntax highlighting
 filetype plugin indent on " enable filetype-specific indenting
 
-" Memap moving between splits to use ctrl + hjkl
+" Map moving between splits to use ctrl + hjkl
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Map resizing splits with keybindings with ctrl + shift + hjkl
-noremap <silent> <C-H> :vertical resize -3 <CR> 
-noremap <silent> <C-L> :vertical resize +3 <CR> 
-noremap <silent> <C-J> :resize -3 <CR> 
-noremap <silent> <C-K> :resize +3 <CR> 
-
 " move horisontal splits to vertical splits, and vice versa with keybindings
-nnoremap <M-H> <C-w>t<C-w>H
-nnoremap <M-K> <C-w>t<C-w>K
+map <Leader>th <C-w>t<C-w>H
+map <Leader>tk <C-w>t<C-w>K
 
 " vim plugins
 call plug#begin('/$HOME/.vim/autoload/plugged')
@@ -43,5 +45,3 @@ call plug#begin('/$HOME/.vim/autoload/plugged')
 "	Plug 'sheerun/vim-polyglot'
 
 call plug#end()
-
-
