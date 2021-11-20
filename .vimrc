@@ -22,7 +22,6 @@ set incsearch " show partial matches
 set tabstop=2 " set amount of spaces a tab is
 set shiftwidth=4 " need to be set to same as tabstop
 set expandtab  " convert tabs to spaces
-set mouse=nicr " enable mouse to scroll
 syntax on " enable syntax highlighting
 filetype plugin indent on " enable filetype-specific indenting
 
