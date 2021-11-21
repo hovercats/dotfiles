@@ -1,4 +1,8 @@
-# Dotfiles
+ ___      _    __ _ _        
+|   \ ___| |_ / _(_) |___ ___
+| |) / _ \  _|  _| | / -_|_-<
+|___/\___/\__|_| |_|_\___/__/
+                             
 
 Just a repo with my dotfiles and configs
 
@@ -6,16 +10,15 @@ Some notes:
 
 * zshrc
 	* has Vi mode enabled
-	* `ctrl + o` to use LF
-	* `ctrl + v` to go into vim buffer
-	* autocomplete
+	* `ctrl + v` to go into vi buffer
+	* tab completion
 		* works with hidden files aswell
-		* autocomplete is case-insensitive
+		* tab completion is case-insensitive
 			* so you can type all-caps, and tab complete to correct file/dir
 			* and vice versa
 	* syntax highlighting
 	* use builtin autojump feature
-			* type cdr <tab> to see previously used links
+			* type cdr <tab> to see previously used dirs
 			* its labeled in numbers, so you may use that instead
 	* autopairing "" () etc, like in vim
 	* typewritten prompt
