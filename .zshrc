@@ -19,16 +19,11 @@ prompt typewritten
 # aliases
 alias 'rdeps'="kiss revdepends"
 alias 'deps'='kiss de' 
-#alias 'poweroff'='ssu kill -s USR1 1' 	#shinit/sinit
-#alias 'reboot'='ssu kill -s INT 1'	#shinit/sinit
 alias 'poweroff'='ssu poweroff'		#busybox
 alias 'reboot'='ssu reboot' 		#busybox
 alias 'sv'='ssu sv'
-alias 'am'='alsamixer'
-alias 'resize'='mogrify -resize' # imagemagick command
-alias 'irc'='catgirl -h irc.libera.chat -n sad_plan'
-alias 'batt'='cat /sys/class/power_supply/BAT1/capacity && cat /sys/class/power_supply/BAT1/status'
 alias 'velox'='swc-launch velox'
+alias 'batt'='cat /sys/class/power_supply/BAT1/capacity && cat /sys/class/power_supply/BAT1/status'
 
 # some other usefull stuff (man zshoptions for more options)
 setopt autocd # automaticly cd into typed directory
