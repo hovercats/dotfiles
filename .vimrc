@@ -32,8 +32,12 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " move horisontal splits to vertical splits, and vice versa with keybindings
+" this does not work in terminal. have to use the regular keybindings to switch
 map <Leader>th <C-w>t<C-w>H
 map <Leader>tk <C-w>t<C-w>K
+
+" launch a terminal inside vim.
+map <leader>tt :term<CR>
 
 " vim plugins
 call plug#begin('/$HOME/.vim/autoload/plugged')
