@@ -1,96 +1,63 @@
-# disable/enable touchpad
-super + alt + {m,n}
-	xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" {0,1}
+# set fullscreen
+super + f
+  fullscreen.sh $(pfw)
 
-#launch tabbed vimb
-super + alt + v
-	tabbed -c vimb -e 
+# set groups for focued window
+control + shift + {1-9}
+  groups.sh -s $(pfw) {1-9}
+ 
+# toggle groups visibility
+control + {1-9}
+  groups.sh -t {1-9}
 
-# move mouse with arrowkeys
-super + {Down,Right,Left,Up}
-	xdotool mousemove_relative {0 10,10 0,-- -10 0, -- 0 -10}
+# switch to next/prev workspace
+alt + {h,l}
+  workspace.sh {-n,-p}
 
-#focus on first window in stack 
-#super + control + f
-#	wtf $(lsw | head -n 1)
+# switch to nth workspace
+alt + {_, shift} {1-9}
+  workspace.sh -{g,m} {1-9}
 
-# start tiling
-#super + alt + t
-#	tile.sh
+# change focus
+alt + {_, shift} Tab  
+  focus.sh {prev,next}
 
-# move windows around
-#super + {h,j,k,l}
-#      wmv {-20 0, 0 20, 0 -20, 20 0} $(pfw)
+# kill window
+alt + shift + c
+  killw $(pfw)
 
-# resize windows
-#super + shift + {h,j,k,l}
-#      wrs {-20 0, 0 20, 0 -20, 20 0} $(pfw)
+# restart sxhkd
+super + alt r
+  pkill sxhkd && sxhkd &
 
-# grow window 
-#super + {Home,End}
-#  wrs {20 20, -20 -20} $(pfw)
+# launch said scripts
+super + {m,b,d}
+  {dmpv,bmks,dsearch}
 
-# grow with mousescroll
-#super + {button4,button5}
-#  wrs {20 20, -20 -20} $(pfw)
-
-#move windows with mouse
-#super + button1
-#	xmmv $(wid)
-
-# resize windows with mouse
-#super + button3
-# xmrs $(wid)
-
-
-# close window
-#super + q
-#	killw  $(pfw) && wtf $(lsw) -n 1
-
-# cycle through windows
-#alt + Tab  
-#	focus.sh prev
-
-#alt + shift + Tab
-#	focus.sh next
-
-# set window fullscreen
-#super + x
-#  fullscreen.sh $(pfw)
+# launch surf
+super + s
+  surf -d
 
 #launch st
 super + Return
  st  
 
 #launch dmenu
-super + d
+alt + p
 	dmenu_run
 
-#firefox
-super + alt + f
-	firefox
-
 #volumecontrol
-super + {F11,F10}
-	amixer set Master {5%+,5%-}
+super + {0,9}
+	tinymix -D 1 set 13 {5+,5-}
 
 #kill x server
 super + control + q
-	pkill x && pkill rainbow.sh
+	pkill x 
 
 #reboot/poweroff
-super + alt + p
-	ssu poweroff
-
-super + alt + r
-	ssu reboot
+super + alt + {p,r}
+	ssu {poweroff,reboot}
 
 #brightness control
-super + {F3,F4}
-	ssu brightnessctl --class=backlight set {10%-,10%+}
-	
-#restart eiwd
-super + F2
-	ssu sv restart eiwd
-
-
+super + {4,3}
+  bri {d,i}

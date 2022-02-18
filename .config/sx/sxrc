@@ -1,11 +1,9 @@
 #!/bin/sh
 
-#~/.fehbg
-hsetroot -fill /home/wololo/Pictures/wallhaven-43vgyn.jpg
-xrdb ~/.Xresources 
-setxkbmap no &
-#rainbow.sh &
-#exec sxhkd 
+bgs /home/wololo/Pictures/wallhaven-k7v2yd.jpg &
+workspace.sh -i
+#xrdb ~/.Xresources 
 xbanish &
 sxhkd &
-exec monsterwm
+glazier &
+exec holup
