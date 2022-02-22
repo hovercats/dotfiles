@@ -1,9 +1,10 @@
- ___      _    __ _ _        
+``` ascii
+___      _    __ _ _        
 |   \ ___| |_ / _(_) |___ ___
 | |) / _ \  _|  _| | / -_|_-<
 |___/\___/\__|_| |_|_\___/__/
                              
-
+```
 Just a repo with my dotfiles and configs
 
 Some notes:
