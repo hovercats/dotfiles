@@ -20,8 +20,10 @@ set wildmenu " commandline completion. use tab to move around
 set ignorecase " case insensitive searching. set noic to disable
 set incsearch " show partial matches 
 set tabstop=2 " set amount of spaces a tab is
-set shiftwidth=4 " need to be set to same as tabstop
+set shiftwidth=2 " need to be set to same as tabstop
 set expandtab  " convert tabs to spaces
+set ttyfast " Faster redrawing
+set nofoldenable " disable folding
 syntax on " enable syntax highlighting
 filetype plugin indent on " enable filetype-specific indenting
 
@@ -46,5 +48,6 @@ call plug#begin('/$HOME/.vim/autoload/plugged')
 	Plug 'jiangmiao/auto-pairs'
 	" Better Syntax Support
 "	Plug 'sheerun/vim-polyglot'
-
+  "	vim wiki
+  Plug 'vimwiki/vimwiki'
 call plug#end()
