@@ -1,3 +1,28 @@
+# control music with mpc
+super + {_, shift} p
+  mpc {play,pause}
+super + {_, shift} o
+  mpc {next,prev}
+
+# ytfzf with dmenu
+super + alt + y
+  ytfzf -D
+
+# tile windows
+alt + t
+  tile.sh
+
+# move windows with keyboard
+super + {h,j,k,l}
+  wmv {-10 0,0 10,0 -10,10 0} $(pfw)
+
+# resize windows with keyboard
+super + shift + {h,j,k,l}
+  wrs {-10 0,0 10,0 -10,10 0} $(pfw)
+
+super + {Prior,Next}
+  wrs {-10 -10,10 10} $(pfw)
+
 # set fullscreen
 super + f
   fullscreen.sh $(pfw)
@@ -31,8 +56,8 @@ super + alt r
   pkill sxhkd && sxhkd &
 
 # launch said scripts
-super + {m,b,d}
-  {dmpv,bmks,dsearch}
+super + {m,n,b,d}
+  {dmpv,dmpv -d,bmks,dsearch}
 
 # launch surf
 super + s
@@ -54,9 +79,9 @@ super + {0,9}
 super + control + q
 	pkill x 
 
-#reboot/poweroff
-super + alt + {p,r}
-	ssu {poweroff,reboot}
+# poweroff
+super + alt + p
+	ssu poweroff
 
 #brightness control
 super + {4,3}
