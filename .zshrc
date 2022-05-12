@@ -8,20 +8,23 @@
 # (In your .bashrc, .zshrc etc)
 export PATH="${PATH}:${HOME}/.local/bin/"
 
-# add colors even in TTY
-source ~/.ttycolors.sh
+# source .profile, so I dont have to
+. ~/.profile
 
 # typewritten prompt
 fpath+=$HOME/git/typewritten
 autoload -U promptinit; promptinit
 prompt typewritten
 
+
 # aliases
 alias 'rdeps'="kiss revdepends"
 alias 'deps'='kiss de' 
 alias 'poweroff'='ssu poweroff'		#busybox
 alias 'reboot'='ssu reboot' 		#busybox
-alias 'sv'='ssu sv'
+#alias 'poweroff'='ssu kill -s USR1 1' # sinit/shinit
+#alias 'reboot'='ssu kill -s INT 1' # sinit/shinit
+alias 'svc'='ssu svc'
 alias 'velox'='swc-launch velox'
 alias 'batt'='cat /sys/class/power_supply/BAT1/capacity && cat /sys/class/power_supply/BAT1/status'
 
