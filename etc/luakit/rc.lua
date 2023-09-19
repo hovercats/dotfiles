@@ -222,6 +222,16 @@ if pcall(function () lousy.util.find_config("userconf.lua") end) then
     require "userconf"
 end
 
+local engines = {}
+
+-- add custom search engines
+engines.ddg = "https://lite.duckduckgo.com/html?q=%s"
+engines.yt = "https://yewtu.be/search?q=%s"
+engines.sp = "https://startpage.com/sp/search?query=%s"
+
+settings.window.search_engines = engines
+settings.window.default_search_engine = "ddg"
+
 -----------------------------
 -- End user script loading --
 -----------------------------
