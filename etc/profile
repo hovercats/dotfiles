@@ -7,16 +7,16 @@
 # misc variables
 export PATH=/usr/lib/ccache/bin:$PATH
 export LYNX_CFG=$HOME/etc/lynx.cfg
-export BROWSER=luakit
+export BROWSER=surf
 export ENV=$HOME/etc/kshrc
 export PATH=$PATH:$HOME/bin
 export EDITOR=vis
 export CMAKE_GENERATOR=Ninja
 
 # unix filesystem for $HOME
-export XDG_CONFIG_HOME=$HOME/etc 	 # .config
-export XDG_CACHE_HOME=$HOME/var 	 # .cache
-export XDG_DATA_HOME=$HOME/usr  	 # a new home
+export XDG_CONFIG_HOME=$HOME/etc # .config
+export XDG_CACHE_HOME=$HOME/var  # .cache
+export XDG_DATA_HOME=$HOME/usr   # a new home
 
 # Wayland needs this if used.
 mkdir -p /tmp/$(id -u)
@@ -24,7 +24,7 @@ chown wololo:wololo /tmp/$(id -u)
 export XDG_RUNTIME_DIR=/tmp/$(id -u) # i.e. sock files
 
 ### Compiler flags
-export CFLAGS="-Os -g0 -pipe -march=native -mtune=native -Wall -momit-leaf-frame-pointer -fasynchronous-unwind-tables -fira-loop-pressure -ftree-loop-vectorize"
+export CFLAGS="-Os -g0 -pipe -march=native -mtune=native -momit-leaf-frame-pointer -fasynchronous-unwind-tables -fira-loop-pressure -ftree-loop-vectorize -fdata-sections -ffunction-sections"
 export CXXFLAGS="$CFLAGS"
 export LDFLAGS="-Wl,-Os,-z,relro,-z,now,-z,text -Wl,--gc-sections -s"
 export MAKEFLAGS="-j9"
@@ -41,15 +41,12 @@ export KISS_GET=curl
 export KISS_COLOR=1
 export KISS_TMPDIR=/tmp
 export KISS_COMPRESS=gz
-#export KISS_ROOT=/home/wololo/build
 
 ## Repositories
 # kiss-dumpsterfire
 KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-dumpsterfire/core
 KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-dumpsterfire/extra
 KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-dumpsterfire/xorg
-#KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-dumpsterfire/testing
-#KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-dumpsterfire/wayland
 
 # Kiss-xorg
 KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-xorg/xorg
