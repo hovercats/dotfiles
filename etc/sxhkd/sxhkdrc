@@ -1,88 +1,65 @@
-# control music with mpc
-super + {_, shift} p
-  mpc {play,pause}
-super + {_, shift} o
-  mpc {next,prev}
-
-# ytfzf with dmenu
-super + alt + y
-  ytfzf -D
+# control music with cmus
+alt + {_, shift} i
+  cmus-remote {--pause,--play}
+alt + {_, shift} o
+  cmus-remote {--next,--prev}
 
 # tile windows
 alt + t
-  tile.sh
+  tile
 
 # move windows with keyboard
-super + {h,j,k,l}
+alt + {h,j,k,l}
   wmv {-10 0,0 10,0 -10,10 0} $(pfw)
 
 # resize windows with keyboard
-super + shift + {h,j,k,l}
+alt + shift + {h,j,k,l}
   wrs {-10 0,0 10,0 -10,10 0} $(pfw)
 
-super + {Prior,Next}
-  wrs {-10 -10,10 10} $(pfw)
-
 # set fullscreen
-super + f
-  fullscreen.sh $(pfw)
+alt + f
+  fullscreen $(pfw)
 
 # set groups for focued window
 control + shift + {1-9}
-  groups.sh -s $(pfw) {1-9}
+  groups -s $(pfw) {1-9}
  
 # toggle groups visibility
 control + {1-9}
-  groups.sh -t {1-9}
-
-# switch to next/prev workspace
-alt + {h,l}
-  workspace.sh {-n,-p}
-
-# switch to nth workspace
-alt + {_, shift} {1-9}
-  workspace.sh -{g,m} {1-9}
+  groups -t {1-9}
 
 # change focus
-alt + {_, shift} Tab  
-  focus.sh {prev,next}
-
+alt {_, shift} + Tab
+  alt-tab {p, n}
+ 
 # kill window
 alt + shift + c
   killw $(pfw)
 
 # restart sxhkd
-super + alt r
-  pkill sxhkd && sxhkd &
+control + alt + r
+  kill -s KILL $(pidof sxhkd) && sxhkd &
 
 # launch said scripts
-super + {m,n,b,d}
-  {dmpv,dmpv -d,bmks,dsearch}
+alt + {u,n,y,m,shift +m,b,d,p}
+  {cg,smus,termdl,dmpv,dmpv -d,bmks,dsearch,dpdf}
 
 # launch surf
-super + s
+alt + s
   surf -d
 
-#launch st
-super + Return
+# launch st
+alt + Return
  st  
 
-#launch dmenu
-alt + p
-	dmenu_run
+# launch dmenu
+alt + r
+	dmenu_run -c -l 20
 
-#volumecontrol
-super + {0,9}
-	tinymix -D 1 set 13 {5+,5-}
+# volumecontrol
+alt + {0,9}
+	tinymix -D 1 set 14 {5+,5-}
 
-#kill x server
-super + control + q
-	pkill x 
-
-# poweroff
-super + alt + p
-	ssu poweroff
-
-#brightness control
-super + {4,3}
+# brightness control
+alt + {4,3}
   bri {d,i}
