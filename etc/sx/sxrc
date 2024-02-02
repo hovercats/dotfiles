@@ -1,4 +1,4 @@
-#!/bin/rc
+#!/bin/rc -e
 
 bgs $HOME/usr/img/wallhaven-953wjw_1920x1080.png &
 xbanish &
