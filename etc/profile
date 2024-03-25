@@ -33,7 +33,6 @@ export SAMUFLAGS="-j9"
 
 ### KISS stuff
 export REPOS_DIR='/home/wololo/src/repositories'
-export KISS_PATH=''
 export KISS_HOOK=/home/wololo/src/repositories/kiss-hook
 export KISS_FORCE=0
 export KISS_DEBUG=0
@@ -45,19 +44,18 @@ export KISS_COMPRESS=gz
 
 ## Repositories
 # kiss-dumpsterfire
-KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-dumpsterfire/core
-KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-dumpsterfire/extra
-KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-dumpsterfire/xorg
+export KISS_PATH=$REPOS_DIR/kiss-dumpsterfire/core
+export KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-dumpsterfire/extra
+export KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-dumpsterfire/xorg
 
 # Kiss-xorg
-KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-xorg/xorg
-KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-xorg/extra
-KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-xorg/community
+export KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-xorg/xorg
+export KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-xorg/extra
+export KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-xorg/community
 
 # kiss repo
-KISS_PATH=$KISS_PATH:$REPOS_DIR/repo/core                         
-KISS_PATH=$KISS_PATH:$REPOS_DIR/repo/extra
-#KISS_PATH=$KISS_PATH:$REPOS_DIR/repo/wayland
+export KISS_PATH=$KISS_PATH:$REPOS_DIR/repo/core                         
+export KISS_PATH=$KISS_PATH:$REPOS_DIR/repo/extra
 
 # kiss community
-KISS_PATH=$KISS_PATH:$REPOS_DIR/community/community
+export KISS_PATH=$KISS_PATH:$REPOS_DIR/community/community
