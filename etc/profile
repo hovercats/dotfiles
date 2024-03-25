@@ -25,8 +25,8 @@ chown wololo:wololo /tmp/$(id -u)
 export XDG_RUNTIME_DIR=/tmp/$(id -u) # i.e. sock files
 
 ### Compiler flags
-export CFLAGS="-Os -g0 -pipe -march=native -mtune=native -momit-leaf-frame-pointer -fasynchronous-unwind-tables -fira-loop-pressure -ftree-loop-vectorize -fdata-sections -ffunction-sections"
-export CXXFLAGS="$CFLAGS"
+export CFLAGS="-Os -g0 -pipe -march=native -mtune=native -Werror=implicit-function-declaration -momit-leaf-frame-pointer -fasynchronous-unwind-tables -fira-loop-pressure -ftree-loop-vectorize -fdata-sections -ffunction-sections"
+export CXXFLAGS="-Os -g0 -pipe -march=native -mtune=native -momit-leaf-frame-pointer -fasynchronous-unwind-tables -fira-loop-pressure -ftree-loop-vectorize -fdata-sections -ffunction-sections"
 export LDFLAGS="-Wl,-Os,-z,relro,-z,now,-z,text -Wl,--gc-sections -s"
 export MAKEFLAGS="-j9"
 export SAMUFLAGS="-j9"
