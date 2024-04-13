@@ -5,13 +5,9 @@
 #     |_|                       
 
 # misc variables
-export PATH=/usr/lib/ccache/bin:$PATH
 export LYNX_CFG=$HOME/etc/lynx.cfg
 export BROWSER=surf
-export ENV=$HOME/etc/kshrc
 export PATH=$PATH:$HOME/bin
-export EDITOR=vis
-export CMAKE_GENERATOR=Ninja
 export LESSHISTFILE='-'
 
 # unix filesystem for $HOME
@@ -24,38 +20,4 @@ mkdir -p /tmp/$(id -u)
 chown wololo:wololo /tmp/$(id -u)
 export XDG_RUNTIME_DIR=/tmp/$(id -u) # i.e. sock files
 
-### Compiler flags
-export CFLAGS="-Os -g0 -pipe -march=native -mtune=native -Werror=implicit-function-declaration -momit-leaf-frame-pointer -fasynchronous-unwind-tables -fira-loop-pressure -ftree-loop-vectorize -fdata-sections -ffunction-sections"
-export CXXFLAGS="-Os -g0 -pipe -march=native -mtune=native -momit-leaf-frame-pointer -fasynchronous-unwind-tables -fira-loop-pressure -ftree-loop-vectorize -fdata-sections -ffunction-sections"
-export LDFLAGS="-Wl,-Os,-z,relro,-z,now,-z,text -Wl,--gc-sections -s"
-export MAKEFLAGS="-j9"
-export SAMUFLAGS="-j9"
-
-### KISS stuff
-export REPOS_DIR='/home/wololo/src/repositories'
-export KISS_HOOK=/home/wololo/src/repositories/kiss-hook
-export KISS_FORCE=0
-export KISS_DEBUG=0
-export KISS_SU=ssu
-export KISS_GET=curl
-export KISS_COLOR=1
-export KISS_TMPDIR=/tmp
-export KISS_COMPRESS=gz
-
-## Repositories
-# kiss-dumpsterfire
-export KISS_PATH=$REPOS_DIR/kiss-dumpsterfire/core
-export KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-dumpsterfire/extra
-export KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-dumpsterfire/xorg
-
-# Kiss-xorg
-export KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-xorg/xorg
-export KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-xorg/extra
-export KISS_PATH=$KISS_PATH:$REPOS_DIR/kiss-xorg/community
-
-# kiss repo
-export KISS_PATH=$KISS_PATH:$REPOS_DIR/repo/core                         
-export KISS_PATH=$KISS_PATH:$REPOS_DIR/repo/extra
-
-# kiss community
-export KISS_PATH=$KISS_PATH:$REPOS_DIR/community/community
+export KISS_PATH=/home/wololo/src/selfmade/oakiss/repo
