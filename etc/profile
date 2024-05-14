@@ -19,5 +19,3 @@ export XDG_DATA_HOME=$HOME/usr   # a new home
 mkdir -p /tmp/$(id -u)
 chown wololo:wololo /tmp/$(id -u)
 export XDG_RUNTIME_DIR=/tmp/$(id -u) # i.e. sock files
-
-export KISS_PATH=/home/wololo/src/selfmade/oakiss/repo
