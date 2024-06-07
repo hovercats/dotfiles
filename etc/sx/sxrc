@@ -1,6 +1,7 @@
 #!/bin/rc
 
-bgs $HOME/usr/img/wallhaven-953wjw_1920x1080.png &
+bgs $HOME/usr/img/wallhaven-yx357x.png &
 xbanish &
 sxhkd -c $HOME/etc/sxhkd/sxhkdrc &
+wew | watcher &
 exec glazier
