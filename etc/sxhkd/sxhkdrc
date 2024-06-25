@@ -42,7 +42,7 @@ control + alt + r
 
 # launch said scripts
 alt + {u,n,y,m,shift +m,b,d,p}
-  {cg,smus,termdl,dmpv,dmpv -d,bmks,dsearch,dpdf}
+  {irc,smus,termdl,dmpv,dmpv -d,bmks,dsearch,dpdf}
 
 # launch surf
 alt + s
