@@ -1,6 +1,6 @@
 #!/bin/rc
 
-bgs $HOME/usr/img/wallhaven-yx357x.png &
+bgs $HOME/usr/img/wallhaven-yx357x.png
 xbanish &
 sxhkd -c $HOME/etc/sxhkd/sxhkdrc &
 wew | watcher &
