@@ -41,8 +41,8 @@ control + alt + r
   kill -s KILL $(pidof sxhkd) && sxhkd &
 
 # launch said scripts
-alt + {u,n,y,m,shift +m,b,d,p}
-  {irc,smus,termdl,dmpv,dmpv -d,bmks,dsearch,dpdf}
+alt + {u,n,y,m,shift +m,b,shift +b,d,p}
+  {irc,smus,termdl,dmpv,dmpv -d,bmks,bmks d,dsearch,dpdf}
 
 # launch surf
 alt + s
