@@ -28,7 +28,6 @@ require "unique_instance"
 -- has no effect since WebKit 2.26
 luakit.process_limit = 4
 -- Set the cookie storage location
--- soup.cookies_storage = luakit.data_dir .. "/cookies.db"
 soup.cookies_storage = "/tmp/cookies.db"
 
 -- Load library of useful functions for luakit
@@ -42,17 +41,17 @@ assert(lousy.theme.get(), "failed to load theme")
 -- Load users window class
 -- ("$XDG_CONFIG_HOME/luakit/window.lua" or "/etc/xdg/luakit/window.lua")
 local window = require "window"
--- autohide statusbar
-window.add_signal("init", function (w)
-	w.update_sbar_visibility_old = w.update_sbar_visibility
-	w.update_sbar_visibility = function (w)
-		w:update_sbar_visibility_old()
-		if (w.bar_layout.visible_child == w.sbar.ebox) then
-			w.bar_layout.visible = false
-		end
-	end
-end)
 
+-- Autohide statusbar
+window.add_signal("init", function (w)
+       w.update_sbar_visibility_old = w.update_sbar_visibility
+       w.update_sbar_visibility = function (w)
+               w:update_sbar_visibility_old()
+               if (w.bar_layout.visible_child == w.sbar.ebox) then
+                       w.bar_layout.visible = false
+               end
+       end
+end)
 
 -- Load users webview class
 -- ("$XDG_CONFIG_HOME/luakit/webview.lua" or "/etc/xdg/luakit/webview.lua")
@@ -137,6 +136,7 @@ local downloads = require "downloads"
 local downloads_chrome = require "downloads_chrome"
 downloads.default_dir = os.getenv("HOME") .. "/usr/dl"
 
+
 -- Add automatic PDF downloading and opening
 local viewpdf = require "viewpdf"
 
@@ -178,18 +178,19 @@ local open_editor = require "open_editor"
 -- `enable_plugins` settings, as these will conflict.
 local noscript = require "noscript"
 noscript.enable_scripts = false
+require "noscript"
 
 local follow_selected = require "follow_selected"
 local go_input = require "go_input"
 local go_next_prev = require "go_next_prev"
 local go_up = require "go_up"
 
--- custom hint labels
+-- Custom hint labels using homerow
 local select = require "select"
 select.label_maker = function ()
-	local chars = charset("asdfg;hjkl")
-	local chars = interleave("asdfg", "hjkl")
-	return trim(sort(reverse(chars)))
+       local chars = charset("asdfg;hjkl")
+       local chars = interleave("asdfg", "hjkl")
+       return trim(sort(reverse(chars)))
 end
 
 -- Filter Referer HTTP header if page domain does not match Referer domain
@@ -222,15 +223,16 @@ if pcall(function () lousy.util.find_config("userconf.lua") end) then
     require "userconf"
 end
 
+-- Add custom search engines
 local engines = {}
 
--- add custom search engines
 engines.ddg = "https://lite.duckduckgo.com/html?q=%s"
 engines.yt = "https://yewtu.be/search?q=%s"
 engines.sp = "https://startpage.com/sp/search?query=%s"
 
 settings.window.search_engines = engines
 settings.window.default_search_engine = "ddg"
+
 
 -----------------------------
 -- End user script loading --
