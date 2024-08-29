@@ -14,8 +14,3 @@ export LESSHISTFILE='-'
 export XDG_CONFIG_HOME=$HOME/etc # .config
 export XDG_CACHE_HOME=$HOME/var  # .cache
 export XDG_DATA_HOME=$HOME/usr   # a new home
-
-# Wayland needs this if used.
-mkdir -p /tmp/$(id -u)
-chown wololo:wololo /tmp/$(id -u)
-export XDG_RUNTIME_DIR=/tmp/$(id -u) # i.e. sock files
