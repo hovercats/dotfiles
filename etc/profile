@@ -11,7 +11,13 @@ export PATH=$HOME/bin:$PATH
 export LESSHISTFILE='-'
 export TRANSMISSION_WEB_HOME=$HOME/usr/share/transmission
 
-# unix filesystem for $HOME
-export XDG_CONFIG_HOME=$HOME/etc # .config
-export XDG_CACHE_HOME=$HOME/var  # .cache
-export XDG_DATA_HOME=$HOME/usr   # a new home
+# unix filesystem for $HOME/XDG dirs
+export XDG_CONFIG_HOME=$HOME/etc     # .config
+export XDG_CACHE_HOME=$HOME/var      # .cache
+export XDG_DATA_HOME=$HOME/usr       # a new home
+export XDG_DOWNLOAD_DIR=$HOME/usr/dl # firefox dl dir
+
+# Wayland requires this
+export XDG_RUNTIME_DIR=/tmp/xdg/$(id -u)
+mkdir -p $XDG_RUNTIME_DIR
+chown -R wololo:wololo $XDG_RUNTIME_DIR
