@@ -42,7 +42,7 @@ control + alt + r
 
 # launch scripts
 alt + {n,m,shift +m,b,shift +b,d}
-	{smus,dmpv,dmpv -d,bmks,bmks d,dsearch}
+	{smus,dmpv,dmpv -d,bmks,bmks d,dsearch -d}
 
 # launch st
 alt + Return
