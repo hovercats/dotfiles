@@ -15,7 +15,6 @@ export TRANSMISSION_WEB_HOME=$HOME/usr/share/transmission
 export XDG_CONFIG_HOME=$HOME/etc         # .config
 export XDG_CACHE_HOME=$HOME/var          # .cache
 export XDG_DATA_HOME=$HOME/usr           # a new home
-export XDG_DOWNLOAD_DIR=$HOME/usr/dl     # firefox dl dir
 export XDG_RUNTIME_DIR=/tmp/xdg/$(id -u) # Wayland requires this
 mkdir -p $XDG_RUNTIME_DIR
 chown -R wololo:wololo $XDG_RUNTIME_DIR
