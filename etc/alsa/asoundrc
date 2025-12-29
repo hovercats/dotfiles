@@ -1,2 +1,4 @@
-defaults.pcm.card 1
-defaults.ctl.card 1
+#defaults.pcm.card 1 # AUX headset/laptop speakers
+defaults.pcm.card 2 # USB Headset
+defaults.ctl.card 0
+
