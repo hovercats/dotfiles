@@ -54,7 +54,7 @@ alt + r
 
 # volumecontrol
 alt + {0,9}
-	tinymix -D 1 set 14 {5+,5-}
+	vol {-i,-d}
 
 # brightness control
 alt + {4,3}
