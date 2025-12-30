@@ -36,9 +36,9 @@ alt {_, shift} + Tab
 alt + shift + c
 	killw $(pfw)
 
-# restart sxhkd
+# reload sxhkd config
 control + alt + r
-	kill -s KILL $(pidof sxhkd) && sxhkd &
+	kill -s USR1 $(pidof sxhkd)
 
 # launch scripts
 alt + {n,m,shift +m,b,shift +b,d}
