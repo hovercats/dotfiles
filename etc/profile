@@ -1,7 +1,8 @@
 # misc variables
 export LYNX_CFG=$HOME/etc/lynx.cfg
 export BROWSER=luakit
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/bin:/usr/lib/ccache/bin:$PATH:/usr/bin
+export MANPATH=$MANPATH:/usr/share/man
 export LESSHISTFILE='-'
 export TRANSMISSION_WEB_HOME=$HOME/usr/share/transmission
 
