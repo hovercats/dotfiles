@@ -1,0 +1,101 @@
+#
+### howl config file
+#
+
+#### Programs ####
+# launch st
+howlc bind alt+Return "st"
+
+# launch dmenu
+howlc bind alt+r "dmenu_run"
+
+# cmus controls
+howlc bind alt+shift+i "cmus-remote --play"
+howlc bind alt+i "cmus-remote --pause"
+howlc bind alt+shift+o "cmus-remote --prev"
+howlc bind alt+o "cmus-remote --next"
+
+# volume control
+howlc bind alt+9 "vol -d"
+howlc bind alt+0 "vol -i"
+
+# brightness control
+howlc bind alt+F3 "bri i"
+howlc bind alt+F4 "bri d"
+
+# launch scripts
+howlc bind alt+b "bmks"
+howlc bind alt+m "dmpv"
+howlc bind alt+shift+m "dmpv -d"
+howlc bind alt+d "dsearch -d"
+
+
+#### Looks ####
+# wallpaper
+swall usr/img/wallhaven-yx357x.png
+
+# border widths
+howlc inner_border_width 3
+howlc outer_border_width 4
+
+# bordercolors
+howlc inner_focus_color "#deadca7"
+
+
+#### Window Manipulation ####
+# alt-tabbing via script to raise window simultaneously
+howlc bind alt+Tab "tab p"
+howlc bind alt+shift+Tab "tab n"
+
+# fullscreen
+howlc bind alt+f "howlc fullscreen"
+
+# center the window
+howlc bind alt+c "howlc center"
+
+# close window
+howlc bind alt+q "howlc close"
+
+# move windows with keyboard
+howlc bind alt+k "howlc move 0 -25"
+howlc bind alt+j "howlc move 0 25"
+howlc bind alt+h "howlc move -25 0"
+howlc bind alt+l "howlc move 25 0"
+
+# and faster
+howlc bind win+k "howlc move 0 -50"
+howlc bind win+j "howlc move 0 50"
+howlc bind win+h "howlc move -50 0"
+howlc bind win+l "howlc move 50 0"
+
+# resize with keyboard
+howlc bind alt+shift+k "howlc resize -0 -25"
+howlc bind alt+shift+j "howlc resize 0 25"
+howlc bind alt+shift+h "howlc resize -25 0"
+howlc bind alt+shift+l "howlc resize 25 0"
+
+# and faster
+howlc bind win+shift+k "howlc resize -0 -50"
+howlc bind win+shift+j "howlc resize 0 50"
+howlc bind win+shift+h "howlc resize -50 0"
+howlc bind win+shift+l "howlc resize 50 0"
+
+
+### Misc ###
+# quit howl
+howlc bind alt+shift+q "howlc quit"
+
+# switch workspaces
+howlc bind alt+1 "howlc workspace 1"
+howlc bind alt+2 "howlc workspace 2"
+howlc bind alt+3 "howlc workspace 3"
+howlc bind alt+4 "howlc workspace 4"
+howlc bind alt+5 "howlc workspace 5"
+
+# move to workspace
+howlc bind alt+shift+1 "howlc move_workspace 1"
+howlc bind alt+shift+2 "howlc move_workspace 2"
+howlc bind alt+shift+3 "howlc move_workspace 3"
+howlc bind alt+shift+4 "howlc move_workspace 4"
+howlc bind alt+shift+5 "howlc move_workspace 5"
+
