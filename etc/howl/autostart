@@ -32,7 +32,7 @@ howlc bind alt+d "dsearch -d"
 
 #### Looks ####
 # wallpaper
-swall usr/img/wallhaven-yx357x.png
+wawa fit usr/img/wallhaven-yx357x.png &
 
 # border widths
 howlc inner_border_width 3
@@ -41,8 +41,10 @@ howlc outer_border_width 4
 # bordercolors
 howlc inner_focus_color "#deadca7"
 
-
 #### Window Manipulation ####
+# teleport windows
+howlc bind alt+space "teleport"
+
 # alt-tabbing via script to raise window simultaneously
 howlc bind alt+Tab "tab p"
 howlc bind alt+shift+Tab "tab n"
