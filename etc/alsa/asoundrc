@@ -1,3 +1,5 @@
 #defaults.pcm.card 1 # AUX headset/laptop speakers
-defaults.pcm.card 2 # USB Headset
+defaults.pcm.card 2 # USB Headset laptop
+#defaults.pcm.card 0 # desktop
+#defaults.pcm.device 3 # desktop
 defaults.ctl.card 0
