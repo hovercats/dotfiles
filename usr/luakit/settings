@@ -1,0 +1,18 @@
+{{
+["domain"]={2},
+},
+{
+[""]={3},
+},
+{
+["window.new_window_size"]="800x900",
+["webview.enable_hyperlink_auditing"]=false,
+["window.close_with_last_tab"]=true,
+["webview.cursive_font_family"]="Liberation Mono",
+["webview.fantasy_font_family"]="Liberation Mono",
+["webview.monospace_font_family"]="Liberation Mono",
+["window.home_page"]="about:blank",
+["webview.default_font_family"]="Liberation Mono",
+["webview.pictograph_font_family"]="Liberation Mono",
+},
+}
