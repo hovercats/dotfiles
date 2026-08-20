@@ -10,9 +10,9 @@ howlc bind alt+Return "st"
 howlc bind alt+r "dmenu_run"
 
 # music controls
-howlc bind alt+i "ampv pause"
-howlc bind alt+shift+o "ampv prev"
-howlc bind alt+o "ampv next"
+howlc bind alt+i "ampv -p"
+howlc bind alt+shift+o "ampv -P"
+howlc bind alt+o "ampv -n"
 
 # volume control
 howlc bind alt+9 "vol -d"
@@ -45,8 +45,8 @@ howlc inner_focus_color "#deadca7"
 howlc bind alt+space "teleport"
 
 # alt-tabbing via script to raise window simultaneously
-howlc bind alt+Tab "tab p"
-howlc bind alt+shift+Tab "tab n"
+howlc bind alt+Tab "tab -p"
+howlc bind alt+shift+Tab "tab -n"
 
 # fullscreen
 howlc bind alt+f "howlc fullscreen"
